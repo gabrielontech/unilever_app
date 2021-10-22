@@ -7,9 +7,11 @@ class CustomButton extends StatelessWidget {
   final Color? backgroundColor;
   final Color? borderSide;
   final double? size;
+  final String? routeName;
   
  const CustomButton({
     Key? key,
+    this.routeName,
     required this.textButton,
     required this.textColor,
     required this.elevation,
@@ -24,7 +26,7 @@ class CustomButton extends StatelessWidget {
       width: size ?? double.infinity,
       height: 50,
       child: OutlinedButton(
-        onPressed: () {},
+        onPressed: () { Navigator.pushNamed(context, routeName!); },
         child: Text(
           textButton,
           style: TextStyle(color: textColor, fontSize: 15),

@@ -26,7 +26,7 @@ class HomeScreen extends StatelessWidget {
               width: 180,
             ),
             const SizedBox( height: 50,),
-            CustomButton(textButton: "SIGN IN", textColor: Colors.white, elevation: true, backgroundColor: Colors.deepPurple[900]), 
+            CustomButton(routeName: '/signIn',textButton: "SIGN IN", textColor: Colors.white, elevation: true, backgroundColor: Colors.deepPurple[900]), 
             const Padding(
               padding: EdgeInsets.only(top : 45.0),
               child: SeparatorChoice(),
