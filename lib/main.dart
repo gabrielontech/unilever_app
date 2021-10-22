@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'presentation/presentation_export.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,6 +10,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp();
+    return const MaterialApp(
+      title : 'Keller',
+      debugShowCheckedModeBanner :  false,
+      onGenerateRoute: AppRouter.onGenerate,
+      initialRoute :  HomeScreen.routeName,
+    );
   }
 }
