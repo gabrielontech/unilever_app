@@ -14,6 +14,11 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.blueGrey[50],
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(automaticallyImplyLeading: false,title: Text("Home", style: TextStyle(color: Colors.black),), centerTitle: true, backgroundColor: Colors.transparent,  elevation: 0.0, ),
+
+    );
   }
 }
