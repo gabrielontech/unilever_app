@@ -26,7 +26,9 @@ class CustomButton extends StatelessWidget {
       width: size ?? double.infinity,
       height: 50,
       child: OutlinedButton(
-        onPressed: () { Navigator.pushNamed(context, routeName!); },
+        onPressed: () { 
+          if(routeName != null){Navigator.pushNamed(context, routeName!);}
+ },
         child: Text(
           textButton,
           style: TextStyle(color: textColor, fontSize: 15),

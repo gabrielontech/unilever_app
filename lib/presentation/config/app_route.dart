@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:unilever_app/presentation/presentation_export.dart';
-import 'package:unilever_app/presentation/views/home/sign_in_screen.dart';
+import 'package:unilever_app/presentation/views/views_export.dart';
 
 class AppRouter {
   static Route onGenerate(RouteSettings settings) {
@@ -15,6 +14,8 @@ class AppRouter {
         return HomeScreen.route();
       case SignInScreen.routeName:
           return SignInScreen.route();
+      case WelcomeScreen.routeName:
+          return WelcomeScreen.route();
       default:
         return _errorRoute();
     }
