@@ -27,18 +27,23 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  bloc: ^7.2.1
   build_runner: ^2.1.4
+  carousel_slider: ^4.0.0
   cloud_firestore: ^2.5.4
   cupertino_icons: ^1.0.2
   dartz: ^0.10.0
+  equatable: ^2.0.3
   firebase: ^9.0.2
   firebase_analytics: ^8.3.4
   firebase_auth: ^3.1.4
   firebase_core: ^1.8.0
   flutter:
     sdk: flutter
-  freezed_annotation: ^0.15.0
+  flutter_bloc: ^7.3.1
   freezed: ^0.15.0+1
+  freezed_annotation: ^0.15.0
+  smooth_page_indicator: ^1.0.0+2
 
 dev_dependencies:
   flutter_lints: ^1.0.0
@@ -56,7 +61,7 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
   assets:
-      - assets/images/unileverw.jpg
+    - assets/images/unileverw.jpg
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
