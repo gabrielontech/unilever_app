@@ -18,16 +18,7 @@ class CategoryScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.blueGrey[50],
       extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: const Text(
-          "Category",
-          style: TextStyle(color: Colors.black),
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.transparent,
-        elevation: 0.0,
-      ),
+      appBar: CustomAppBar(text: "Categories"),
     );
   }
 }

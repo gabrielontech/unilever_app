@@ -17,15 +17,7 @@ class ShoppingScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.blueGrey[50],
-      appBar: AppBar(
-        title: const Text(
-          "Shopping",
-          style: TextStyle(color: Colors.black),
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.transparent,
-        elevation: 0.0,
-      ),
+      appBar: CustomAppBar(text: "Shopping"),
     );
   }
 }

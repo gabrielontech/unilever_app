@@ -23,16 +23,7 @@ class WelcomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.blueGrey[50],
       extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: const Text(
-          "Home",
-          style: TextStyle(color: Colors.black),
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.transparent,
-        elevation: 0.0,
-      ),
+      appBar: const CustomAppBar(text: "Home",),
       body: BlocBuilder<OnBoardingDotBloc, int>(
         builder: (context, state) {
           return ListView(
