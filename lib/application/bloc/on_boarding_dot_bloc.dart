@@ -1,18 +1,19 @@
 import 'package:bloc/bloc.dart';
 
-abstract class OnBoardingDotEvent{}
+abstract class OnBoardingDotEvent
+{
 
-class AddIndex extends OnBoardingDotEvent{
-  int index = 0;
+}
 
+class AddIndex extends OnBoardingDotEvent
+{
+  int index;
+  
   AddIndex(this.index);
 }
 
-class OnBoardingDotBloc extends Bloc<OnBoardingDotEvent, int>
-{
-    OnBoardingDotBloc() : super(0) {
-
-    _updateIndex(AddIndex event, Emitter<int> emit) => emit(event.index);
-    on<AddIndex>(_updateIndex); 
+class OnBoardingDotBloc extends Bloc<OnBoardingDotEvent, int> {
+  OnBoardingDotBloc() : super(0) {
+    on<AddIndex>((event, emit) => emit(event.index)); // pas OnBoardingState(index: machin)
   }
 }
