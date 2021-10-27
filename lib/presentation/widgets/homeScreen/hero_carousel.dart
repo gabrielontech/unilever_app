@@ -10,33 +10,30 @@ class HeroCarouselCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {},
-      child: Container(
-        decoration: BoxDecoration( 
-      color : Colors.white,
-      boxShadow: [
-      BoxShadow(
-        color: Colors.grey.withOpacity(0.5),
-        spreadRadius: 5,
-        blurRadius: 7,
-        offset: const Offset(0, 3), // changes position of shadow
-      ),
+    return Container(
+      decoration: BoxDecoration( 
+    color : Colors.white,
+    boxShadow: [
+    BoxShadow(
+      color: Colors.grey.withOpacity(0.5),
+      spreadRadius: 5,
+      blurRadius: 7,
+      offset: const Offset(0, 3), // changes position of shadow
+    ),
     ],),
-        margin: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 15.0),
-        child: ClipRRect(
-            borderRadius: const BorderRadius.all(Radius.circular(5.0)),
-            child: Stack(
-              children: <Widget>[
-                Image.network(
-                    category!.imageUrl,
-                    alignment: Alignment.center,
-                    fit: BoxFit.fill,
-                    height: double.infinity,
-                    width: double.infinity),
-              ],
-            ),),
-      ),
+      margin: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 25.0),
+      child: ClipRRect(
+          borderRadius: const BorderRadius.all(Radius.circular(5.0)),
+          child: Stack(
+            children: <Widget>[
+              Image.network(
+                  category!.imageUrl,
+                  alignment: Alignment.center,
+                  fit: BoxFit.fill,
+                  height: double.infinity,
+                  width: double.infinity),
+            ],
+          ),),
     );
   }
 }

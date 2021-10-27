@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:unilever_app/application/bloc/on_boarding_dot_bloc.dart';
 import 'presentation/presentation_export.dart';
 
 void main() {
@@ -10,10 +12,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner :  false,
-      onGenerateRoute: AppRouter.onGenerate,
-      initialRoute :  HomeScreen.routeName,
+    return  BlocProvider(
+      create: (context) => OnBoardingDotBloc(),
+      child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        onGenerateRoute: AppRouter.onGenerate,
+        initialRoute: HomeScreen.routeName,
+      ),
     );
   }
 }

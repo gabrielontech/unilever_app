@@ -6,6 +6,7 @@ class CustomButton extends StatelessWidget {
   final bool elevation;
   final Color? backgroundColor;
   final Color? borderSide;
+  final double? height;
   final double? size;
   final String? routeName;
   
@@ -16,6 +17,7 @@ class CustomButton extends StatelessWidget {
     required this.textColor,
     required this.elevation,
     required this.backgroundColor,
+    this.height,
     this.borderSide,
     this.size
   }) : super(key: key);
@@ -24,18 +26,19 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: size ?? double.infinity,
-      height: 50,
+      height: height ?? 50,
       child: OutlinedButton(
         onPressed: () { 
           if(routeName != null){Navigator.pushNamed(context, routeName!);}
  },
         child: Text(
           textButton,
-          style: TextStyle(color: textColor, fontSize: 15),
+          textAlign: TextAlign.center,
+          style: TextStyle(color: textColor, fontSize: 15,),
         ),
         style: OutlinedButton.styleFrom(
           side: BorderSide(
-            width: borderSide == null ? 0 :  2,
+            width: borderSide == null ? 0 :  1,
             color: borderSide == null ? Colors.transparent : borderSide!,
             style: BorderStyle.solid,
           ),
