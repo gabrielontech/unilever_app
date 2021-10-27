@@ -144,9 +144,6 @@ class WelcomeScreen extends StatelessWidget {
           );
         },
       ),
-      floatingActionButton: FloatingShoppingWidgets(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: CustomNavBar(),
     );
   }
 }

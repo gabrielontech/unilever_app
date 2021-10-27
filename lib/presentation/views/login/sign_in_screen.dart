@@ -40,7 +40,7 @@ class SignInScreen extends StatelessWidget {
                   ],
                 ),
                  const SizedBox(height: 40),
-                CustomButton(routeName: '/welcome',textButton: 'Sign In', textColor: Colors.white, elevation: true, backgroundColor: Colors.deepPurple[900]),
+                CustomButton(routeName: '/navigation',textButton: 'Sign In', textColor: Colors.white, elevation: true, backgroundColor: Colors.deepPurple[900]),
                 const SizedBox(height: 30,),
                 const SeparatorChoice(),
                 const SizedBox(height: 30,),

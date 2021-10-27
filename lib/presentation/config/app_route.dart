@@ -12,10 +12,19 @@ class AppRouter {
       // ignore: no_duplicate_case_values
       case HomeScreen.routeName:
         return HomeScreen.route();
+      case NavigationScreen.routeName:
+          return NavigationScreen.route();  
       case SignInScreen.routeName:
           return SignInScreen.route();
       case WelcomeScreen.routeName:
           return WelcomeScreen.route();
+      case SearchScreen.routeName:
+          return SearchScreen.route();
+      case ShoppingScreen.routeName:
+          return ShoppingScreen.route();
+       case CategoryScreen.routeName:
+          return CategoryScreen.route();
+          
       default:
         return _errorRoute();
     }

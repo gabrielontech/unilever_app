@@ -30,7 +30,9 @@ class FloatingShoppingWidgets extends StatelessWidget {
             ),
           ),
         ),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, "/Shopping");
+        },
       ),
     );
   }

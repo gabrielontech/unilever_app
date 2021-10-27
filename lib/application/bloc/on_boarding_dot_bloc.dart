@@ -15,5 +15,4 @@ class OnBoardingDotBloc extends Bloc<OnBoardingDotEvent, int>
     _updateIndex(AddIndex event, Emitter<int> emit) => emit(event.index);
     on<AddIndex>(_updateIndex); 
   }
-
 }
